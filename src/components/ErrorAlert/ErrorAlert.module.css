@@ -1,0 +1,61 @@
+.errorBanner {
+  position: fixed;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: rgba(26, 18, 22, 0.95);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  border-radius: 8px;
+  color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  max-width: 90vw;
+  animation: slideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -12px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.errorIcon {
+  color: #f43f5e;
+  flex-shrink: 0;
+}
+
+.errorMessage {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #f4f4f6;
+}
+
+.dismissButton {
+  color: var(--text-muted);
+  padding: 0.2rem;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.dismissButton:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
